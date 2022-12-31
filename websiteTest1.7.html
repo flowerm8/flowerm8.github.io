@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I see where you've been</title>
+    <link rel="stylesheet" href="/static/style2.css">  
+</head>
+<body>
+    <canvas id="canvas1"></canvas>
+    <div class="container"><span class="icon"><i class="fa fa-search"></i></span>
+        <!-- <form action="{{ url_for("homePage")}}" method="post"> -->
+        <form method="post">
+            <!-- Paste asset id, jpg link or pool.pm link -->
+        <input type="search" name="desiredAsset" id="search" onfocus="this.value=''" value="Paste jpg.store link"/>
+        </form>
+    </div>
+    <style>
+        #illuminatiEye {
+            position: absolute;
+            top: -5px;
+            left: 316px;
+	        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            clip: rect(0px, 75px, 77px, 0px);
+            z-index: 2;
+        }
+        #eyeDiv img{
+            position: absolute;
+            z-index: 3;
+            top: 42px;
+            left: 345px;
+        }
+        #addressID {
+            position: relative;
+            z-index: 4;
+            top: 30px;
+            /* color: white; */
+            font-size: 13px;
+            
+        }
+    </style>
+    <img id="illuminatiEye" src = "/static/illuminati.png" width="82" height="85">
+    
+    
+    
+    <!-- <div id="eyeDiv">
+        <img class="eye" src="/static/circle.png" width="20" height="20">
+    </div> -->
+    <div id = "addressID">
+        {% for address in addresses %}
+        <a href="https://pool.pm/{{ address }}" target="_blank">{{ address }}</a><br>
+        {% endfor %}
+        testtext
+        <!-- {{ addresses }} -->
+    </div>
+    <script src="/static/scriptParticles1.1.js"></script>
+    
+</body>
+</html>
