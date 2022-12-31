@@ -94,7 +94,7 @@ def home():
     #return addresses
     #return render_template("websiteTest1.5.html")
     #return render_template("websiteTest1.5.html", dAsset=request.args['desiredAsset'])
-    return render_template("websiteTest1.7.html", addresses=addresses)
+    return render_template("index.html", addresses=addresses)
 
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
