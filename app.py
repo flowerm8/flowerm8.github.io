@@ -12,7 +12,7 @@ def redirect():
 
 @app.route("/", methods=['GET'])
 def homePage():
-    return render_template("websiteTest1.7.html")
+    return render_template("index.html")
 
 @app.route("/", methods =["POST"])
 def home():
